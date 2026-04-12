@@ -28,3 +28,14 @@ jobs:
         with:
           name: Artifacts
           path: build/libs/
+      - name: Configure Gradle properties
+        run: |
+          echo "systemProp.https.protocols=TLSv1.2,TLSv1.3" >> gradle.properties
+          echo "systemProp.jdk.tls.client.protocols=TLSv1.2,TLSv1.3" >> gradle.properties
+          # 可选：配置代理（如果使用代理的话，一般不需要）
+            
+          # 使用 Gradle Wrapper 并添加镜像仓库（需要同时修改 build.gradle）
+      - name: Build with Gradle
+        run: |
+          # 如果 build.gradle 中已配置阿里云镜像，这步会自动使用
+          ./gradlew build --no-daemon --stacktrace

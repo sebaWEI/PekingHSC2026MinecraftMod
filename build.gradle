@@ -18,6 +18,9 @@ plugins {
 version = project.mod_version
 group = project.maven_group
 
+// 与 gradle.properties 中 nonProxyHosts 对齐，并补充登录/正版验证域名；供 Minecraft 客户端/服务端 JVM 使用（Gradle 的 systemProp 不会传给游戏进程）。
+def jvmNoDirectProxyHosts = 'localhost|127.0.0.1|*.fabricmc.net|maven.fabricmc.net|*.minecraft.net|libraries.minecraft.net|launchermeta.mojang.com|piston-data.mojang.com|resources.download.minecraft.net|services.gradle.org|repo.maven.apache.org|repo1.maven.org|maven.aliyun.com|*.maven.aliyun.com|*.blob.core.windows.net|*.mojang.com|api.minecraftservices.com|*.microsoft.com|login.microsoftonline.com'
+
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
@@ -48,6 +51,14 @@ repositories {
 
 loom {
 	splitEnvironmentSourceSets()
+
+	runs {
+		configureEach {
+			vmArgs "-Djava.net.preferIPv4Stack=true"
+			vmArgs "-Dhttp.nonProxyHosts=${jvmNoDirectProxyHosts}"
+			vmArgs "-Dhttps.nonProxyHosts=${jvmNoDirectProxyHosts}"
+		}
+	}
 
 	mods {
 		"igem-mod" {
