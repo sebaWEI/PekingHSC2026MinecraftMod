@@ -1,0 +1,141 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        // Loom 插件 classpath 会拉取 net.fabricmc:fabric-loom 等，官方在 Fabric Maven；勿对 buildscript 做 net.fabricmc 仅阿里云限制。
+        maven { url 'https://maven.fabricmc.net/' }
+        mavenCentral()
+    }
+}
+
+
+
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+	// Add repositories to retrieve artifacts from in here.
+	// You should only use this when depending on other mods because
+	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
+	// for more information about repositories.
+	// com.mojang（如 authlib）在 libraries.minecraft.net 上完整可用；经 Fabric 仓库解析时易先命中
+	// maven.fabricmc.net（Cloudflare），在部分网络/代理下 TLS 握手失败，故固定从 Mojang 库拉取。
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = 'MojangLibraries'
+				url = 'https://libraries.minecraft.net/'
+			}
+		}
+		filter {
+			includeGroup 'com.mojang'
+		}
+	}
+	// vineflower 勿用 exclusiveContent：Loom 的 vineflowerDecompilerClasspath 可能不参与该仓库作用域，会报 Could not find。
+	// 依赖顺序已由下方「阿里云 → Fabric → Central」保证优先镜像。
+	// sponge-mixin 等 net.fabricmc 构件：优先阿里云 → Fabric 官方（避开易 TLS 出问题的 Central）；勿对单模块做 exclusiveContent，否则镜像缺货时无法回退。
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    maven { url 'https://maven.fabricmc.net/' }
+    mavenCentral()
+    maven { url 'https://libraries.minecraft.net/' }
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"igem-mod" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+
+}
+
+fabricApi {
+	configureDataGeneration {
+		client = true
+	}
+}
+
+dependencies {
+	// To change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API. This is technically optional, but you probably want it anyway.
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	
+}
+
+// 不在 processResources 里用 filesMatching（IDEA 会报 MatchingCopyAction）；单独 Copy 生成后再并入资源。
+sourceSets.main.resources.exclude("fabric.mod.json")
+
+def prepareFabricModJson = tasks.register("prepareFabricModJson", Copy) {
+	from("src/main/resources/fabric.mod.json")
+	into(layout.buildDirectory.dir("generated/fabricMod"))
+	def modVersion = project.version.toString()
+	inputs.property("version", modVersion)
+	filter { String line -> line.replace('${version}', modVersion) }
+}
+
+tasks.named("processResources", org.gradle.language.jvm.tasks.ProcessResources).configure {
+	dependsOn(prepareFabricModJson)
+	from(layout.buildDirectory.dir("generated/fabricMod")) {
+		include("fabric.mod.json")
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+	// if it is present.
+	// If you remove this line, sources will not be generated.
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+jar {
+	inputs.property "projectName", project.name
+
+	from("LICENSE") {
+		rename { "${it}_${project.name}"}
+	}
+}
+
+// configure the maven publication
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			from components.java
+		}
+	}
+
+	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+	repositories {
+		// Add repositories to publish to here.
+		// Notice: This block does NOT have the same function as the block in the top level.
+		// The repositories here will be used for publishing your artifact, not for
+		// retrieving dependencies.
+	}
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.fabricmc.net/' }
+        mavenCentral()
+    }
+}
