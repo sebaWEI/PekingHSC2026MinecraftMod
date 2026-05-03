@@ -32,6 +32,10 @@ bin/
 
 run/
 
+# agent
+
+AGENT.md
+
 # java
 
 hs_err_*.log
