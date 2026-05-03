@@ -19,7 +19,7 @@ An educational Minecraft mod that teaches **synthetic biology** through hands-on
 | 2. **Identify** | Place tissue in crafting table to discover DNA parts | Gene sequencing & annotation |
 | 3. **Assemble** | Use the Plasmid Assembler to combine regulatory parts + CDS | Molecular cloning |
 | 4. **Transform** | Combine competent *E. coli* with engineered plasmid | Bacterial transformation |
-| 5. **Express** | Culture engineered bacteria with nutrient broth in Incubator | Protein expression |
+| 5. **Express** | Combine engineered bacteria with nutrient broth in crafting table → proteins | Protein expression |
 | 6. **Enhance** | Use purified proteins at the Smithing Table to upgrade gear | Protein engineering |
 
 ---
@@ -54,7 +54,6 @@ Rarities: Green (65%) → Blue (25%) → Purple (8%) → Gold (2%) — higher ra
 ### Blocks & Machines
 
 - **Plasmid Assembler** — 9-slot crafting station for plasmid assembly (1 core + 8 part slots)
-- **Incubator** — Cultivate bacteria with graded nutrient broth to express proteins
 
 ### 4-Tier Nutrient Broth System
 
@@ -114,7 +113,7 @@ Requires JDK 25+ and Gradle (wrapper included).
 6. Assemble: place `Blank Plasmid` in center + DNA parts around it
 7. Craft `Calcium Chloride` (stone + water bucket), combine with wild *E. coli* → competent cells
 8. Combine competent *E. coli* + engineered plasmid → engineered bacteria
-9. Craft nutrient broth, culture in `Incubator` → proteins
+9. Place engineered bacteria + nutrient broth in crafting table → proteins + waste culture
 10. Use proteins at Smithing Table → enhanced equipment
 
 ## Project Structure
