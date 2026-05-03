@@ -1,6 +1,6 @@
 # SynBio Crafter
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.2-brightgreen)](https://minecraft.net)
+[![Minecraft](https://img.shields.io/badge/Minecraft-26.1.2-brightgreen)](https://minecraft.net)
 [![Fabric](https://img.shields.io/badge/Fabric%20Loader-%3E%3D0.18.6-orange)](https://fabricmc.net)
 [![Java](https://img.shields.io/badge/Java-%3E%3D25-blue)](https://adoptium.net)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
