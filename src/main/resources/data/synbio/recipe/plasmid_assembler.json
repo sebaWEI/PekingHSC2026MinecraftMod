@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "ICI",
+    "III"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "C": "minecraft:crafting_table"
+  },
+  "result": {
+    "id": "synbio:plasmid_assembler",
+    "count": 1
+  }
+}

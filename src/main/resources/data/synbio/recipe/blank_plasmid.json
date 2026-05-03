@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:redstone"
+  ],
+  "result": {
+    "id": "synbio:blank_plasmid",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dirt",
+    "minecraft:glass_bottle",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "synbio:e_coli_wild",
+    "count": 1
+  }
+}

@@ -1,9 +1,9 @@
 buildscript {
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url = 'https://maven.aliyun.com/repository/public' }
+        maven { url = 'https://maven.aliyun.com/repository/gradle-plugin' }
         // Loom 插件 classpath 会拉取 net.fabricmc:fabric-loom 等，官方在 Fabric Maven；勿对 buildscript 做 net.fabricmc 仅阿里云限制。
-        maven { url 'https://maven.fabricmc.net/' }
+        maven { url = 'https://maven.fabricmc.net/' }
         mavenCentral()
     }
 }
@@ -43,10 +43,10 @@ repositories {
 	// vineflower 勿用 exclusiveContent：Loom 的 vineflowerDecompilerClasspath 可能不参与该仓库作用域，会报 Could not find。
 	// 依赖顺序已由下方「阿里云 → Fabric → Central」保证优先镜像。
 	// sponge-mixin 等 net.fabricmc 构件：优先阿里云 → Fabric 官方（避开易 TLS 出问题的 Central）；勿对单模块做 exclusiveContent，否则镜像缺货时无法回退。
-    maven { url 'https://maven.aliyun.com/repository/public' }
-    maven { url 'https://maven.fabricmc.net/' }
+    maven { url = 'https://maven.aliyun.com/repository/public' }
+    maven { url = 'https://maven.fabricmc.net/' }
     mavenCentral()
-    maven { url 'https://libraries.minecraft.net/' }
+    maven { url = 'https://libraries.minecraft.net/' }
 }
 
 loom {
@@ -61,7 +61,7 @@ loom {
 	}
 
 	mods {
-		"igem-mod" {
+		"synbio" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
@@ -145,8 +145,8 @@ publishing {
 
 allprojects {
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.fabricmc.net/' }
+        maven { url = 'https://maven.aliyun.com/repository/public' }
+        maven { url = 'https://maven.fabricmc.net/' }
         mavenCentral()
     }
 }

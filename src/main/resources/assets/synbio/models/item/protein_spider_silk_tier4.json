@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "synbio:item/protein_spider_silk_tier4"
+  }
+}

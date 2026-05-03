@@ -1,27 +1,54 @@
 package name.modid;
 
+import name.modid.block.ModBlocks;
+import name.modid.block.entity.ModBlockEntities;
+import name.modid.component.BioEnhancementEffects;
 import name.modid.item.ModItems;
+import name.modid.loot.ModLoot;
+import name.modid.recipe.ModRecipes;
+import name.modid.screen.ModScreenHandlers;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.minecraft.world.item.ItemStack;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class IgemMod implements ModInitializer {
-	public static final String MOD_ID = "igem-mod";
+	public static final String MOD_ID = "synbio";
 
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
+		ModBlocks.initialize();
+		ModBlockEntities.initialize();
+		ModScreenHandlers.initialize();
 		ModItems.initialize();
+		ModRecipes.initialize();
+		ModLoot.initialize();
+		BioEnhancementEffects.register();
 
-		LOGGER.info("Hello Fabric world!");
+		// Starter kit: blank plasmid + all synbio recipes unlocked
+		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
+			var player = handler.getPlayer();
+
+			// Unlock all synbio recipes
+			var keys = server.getRecipeManager().getRecipes()
+				.stream()
+				.filter(r -> r.id().toString().startsWith("synbio:"))
+				.map(r -> r.id())
+				.toList();
+			player.awardRecipesByKey(keys);
+
+			// Give blank plasmid if they don't already have one
+			var inv = player.getInventory();
+			for (int i = 0; i < inv.getContainerSize(); i++) {
+				if (inv.getItem(i).is(ModItems.BLANK_PLASMID)) return;
+			}
+			inv.add(new ItemStack(ModItems.BLANK_PLASMID));
+		});
+
+		LOGGER.info("SynBio Crafter ready.");
 	}
 }

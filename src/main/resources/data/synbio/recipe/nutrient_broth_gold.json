@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#G#",
+    "###"
+  ],
+  "key": {
+    "#": "synbio:nutrient_broth_purple",
+    "G": "minecraft:golden_apple"
+  },
+  "result": {
+    "id": "synbio:nutrient_broth_gold",
+    "count": 8
+  }
+}

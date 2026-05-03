@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": "synbio:nutrient_broth",
+    "C": {
+      "type": "minecraft:alternatives",
+      "options": [
+        "minecraft:prismarine_shard",
+        "minecraft:glow_berries"
+      ]
+    }
+  },
+  "result": {
+    "id": "synbio:nutrient_broth_blue",
+    "count": 8
+  }
+}

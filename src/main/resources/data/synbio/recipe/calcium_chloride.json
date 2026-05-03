@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:stone",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "synbio:calcium_chloride",
+    "count": 4
+  }
+}

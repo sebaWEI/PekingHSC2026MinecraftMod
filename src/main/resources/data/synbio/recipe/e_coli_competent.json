@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "synbio:e_coli_wild",
+    "synbio:calcium_chloride"
+  ],
+  "result": {
+    "id": "synbio:e_coli_competent",
+    "count": 1
+  }
+}

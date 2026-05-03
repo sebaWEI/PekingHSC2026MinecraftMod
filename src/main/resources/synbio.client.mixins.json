@@ -1,0 +1,10 @@
+{
+	"required": false,
+	"package": "name.modid.mixin.client",
+	"compatibilityLevel": "JAVA_25",
+	"client": [],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
+

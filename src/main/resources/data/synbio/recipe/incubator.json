@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "GFG",
+    "III"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "G": "minecraft:glass",
+    "F": "minecraft:furnace"
+  },
+  "result": {
+    "id": "synbio:incubator",
+    "count": 1
+  }
+}

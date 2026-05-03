@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": "synbio:nutrient_broth_blue",
+    "C": {
+      "type": "minecraft:alternatives",
+      "options": [
+        "minecraft:ender_pearl",
+        "minecraft:chorus_fruit",
+        "minecraft:blaze_powder"
+      ]
+    }
+  },
+  "result": {
+    "id": "synbio:nutrient_broth_purple",
+    "count": 8
+  }
+}

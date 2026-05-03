@@ -1,18 +1,18 @@
 {
 	"schemaVersion": 1,
-	"id": "igem-mod",
-	"version": "${version}",
-	"name": "Igem Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"id": "synbio",
+	"version": "${0.0.1}",
+	"name": "SynBio Crafter",
+	"description": "A great synthetic biology mod for the iGEM competition",
 	"authors": [
-		"Me!"
+		"Ziheng Wei"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/igem-mod/icon.png",
+	"icon": "assets/synbio/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -26,9 +26,9 @@
 		]
 	},
 	"mixins": [
-		"igem-mod.mixins.json",
+		"synbio.mixins.json",
 		{
-			"config": "igem-mod.client.mixins.json",
+			"config": "synbio.client.mixins.json",
 			"environment": "client"
 		}
 	],
