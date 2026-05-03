@@ -3,7 +3,7 @@
 [![Minecraft](https://img.shields.io/badge/Minecraft-26.1.2-brightgreen)](https://minecraft.net)
 [![Fabric](https://img.shields.io/badge/Fabric%20Loader-%3E%3D0.18.6-orange)](https://fabricmc.net)
 [![Java](https://img.shields.io/badge/Java-%3E%3D25-blue)](https://adoptium.net)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![License](https://img.shields.io/badge/License-CC0%201.0-lightgrey)](LICENSE)
 
 An educational Minecraft mod that teaches **synthetic biology** through hands-on gameplay. Built for the **iGEM 2026** competition by Peking HSC.
 
@@ -139,4 +139,4 @@ src/main/java/name/modid/
 
 ## License
 
-MIT — feel free to learn from, modify, and share this project. Attribution appreciated.
+CC0 1.0 Universal — public domain dedication. Use freely for any purpose, no attribution required.
