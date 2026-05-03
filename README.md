@@ -28,13 +28,13 @@ An educational Minecraft mod that teaches **synthetic biology** through hands-on
 
 ### 5 DNA Regulatory Part Types (4 Rarity Tiers each)
 
-| Part | Symbol | Real-World Role |
-|------|--------|----------------|
+| Part | Symbol    | Real-World Role |
+|------|-----------|----------------|
 | **Promoter** | → (arrow) | Initiates transcription |
-| **UTR5** | 5′ | Ribosome binding site |
-| **UTR3** | AAA | Poly-A tail / terminator |
-| **Enhancer** | ✦ (star) | Boosts expression |
-| **SINEB2** | S | Translation-enhancing retrotransposon |
+| **UTR5** | 5′        | Ribosome binding site |
+| **UTR3** | 3‘        | Poly-A tail / terminator |
+| **Enhancer** | ✦ (star)  | Boosts expression |
+| **SINEB2** | S         | Translation-enhancing retrotransposon |
 
 Rarities: Green (65%) → Blue (25%) → Purple (8%) → Gold (2%) — higher rarity = stronger expression multiplier.
 
@@ -75,14 +75,14 @@ Expressing proteins produces **Waste Culture** as a byproduct. Accumulating ≥1
 
 ### Requirements
 
-- **Minecraft** 1.21.2 (version 26.1.2)
+- **Minecraft** 26.1.2
 - **Fabric Loader** ≥ 0.18.6
-- **Fabric API** (latest for 1.21.2)
+- **Fabric API** (latest for 26.1.2)
 - **Java** ≥ 25
 
 ### Steps
 
-1. Install [Fabric Loader](https://fabricmc.net/use/) for Minecraft 1.21.2
+1. Install [Fabric Loader](https://fabricmc.net/use/) for Minecraft 26.1.2
 2. Download [Fabric API](https://modrinth.com/mod/fabric-api) and place it in `.minecraft/mods/`
 3. Download `synbio-1.0.0.jar` from [Releases](https://github.com/sebaWEI/PekingHSC2026MinecraftMod/releases)
 4. Place `synbio-1.0.0.jar` in `.minecraft/mods/`
@@ -135,7 +135,7 @@ src/main/java/name/modid/
 ## Credits
 
 - **Developer**: Ziheng Wei (Sebastian Wei) — Peking HSC, iGEM 2026
-- **Built with**: [Fabric Loom](https://fabricmc.net/wiki/documentation:fabric_loom), Minecraft 1.21.2 (Mojang Mappings)
+- **Built with**: [Fabric Loom](https://fabricmc.net/wiki/documentation:fabric_loom), Minecraft 26.1.2 (Mojang Mappings)
 - **Special thanks**: The iGEM community and the Human Practices principle of responsible science
 
 ## License
