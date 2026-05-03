@@ -1,17 +1,18 @@
 {
 	"schemaVersion": 1,
 	"id": "synbio",
-	"version": "${0.0.1}",
+	"version": "1.0.0",
 	"name": "SynBio Crafter",
-	"description": "A great synthetic biology mod for the iGEM competition",
+	"description": "An educational Minecraft mod that teaches synthetic biology through hands-on gameplay: extract DNA parts, assemble plasmids, transform bacteria, express proteins, and bio-enhance your gear. Built for iGEM 2026.",
 	"authors": [
-		"Ziheng Wei"
+		"Ziheng Wei (Sebastian Wei)"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/sebaWEI/PekingHSC2026MinecraftMod",
+		"sources": "https://github.com/sebaWEI/PekingHSC2026MinecraftMod",
+		"issues": "https://github.com/sebaWEI/PekingHSC2026MinecraftMod/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/synbio/icon.png",
 	"environment": "*",
 	"entrypoints": {
