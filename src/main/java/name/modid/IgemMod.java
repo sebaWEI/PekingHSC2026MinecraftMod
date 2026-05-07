@@ -29,7 +29,7 @@ public class IgemMod implements ModInitializer {
 		ModLoot.initialize();
 		BioEnhancementEffects.register();
 
-		// Starter kit: blank plasmid + all synbio recipes unlocked
+		// Starter kit: guide book + blank plasmid + all synbio recipes unlocked
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
 			var player = handler.getPlayer();
 
@@ -41,12 +41,25 @@ public class IgemMod implements ModInitializer {
 				.toList();
 			player.awardRecipesByKey(keys);
 
-			// Give blank plasmid if they don't already have one
+			// Give guide book + blank plasmid if missing
 			var inv = player.getInventory();
+			boolean hasGuide = false;
+			boolean hasPlasmid = false;
 			for (int i = 0; i < inv.getContainerSize(); i++) {
-				if (inv.getItem(i).is(ModItems.BLANK_PLASMID)) return;
+				ItemStack stack = inv.getItem(i);
+				if (stack.is(ModItems.GUIDE_BOOK)) hasGuide = true;
+				if (stack.is(ModItems.BLANK_PLASMID)) hasPlasmid = true;
 			}
-			inv.add(new ItemStack(ModItems.BLANK_PLASMID));
+			if (!hasGuide) {
+				if (!inv.add(new ItemStack(ModItems.GUIDE_BOOK))) {
+					player.drop(new ItemStack(ModItems.GUIDE_BOOK), false);
+				}
+			}
+			if (!hasPlasmid) {
+				if (!inv.add(new ItemStack(ModItems.BLANK_PLASMID))) {
+					player.drop(new ItemStack(ModItems.BLANK_PLASMID), false);
+				}
+			}
 		});
 
 		LOGGER.info("SynBio Crafter ready.");

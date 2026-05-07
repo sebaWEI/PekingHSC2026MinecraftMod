@@ -45,6 +45,8 @@
 	"item.synbio.calcium_chloride": "氯化钙",
 	"item.synbio.e_coli_competent": "感受态大肠杆菌",
 	"container.synbio.plasmid_assembler": "质粒组装台",
+	"item.synbio.plasmid_assembler": "质粒组装台",
+	"item.synbio.incubator": "培养箱",
 
 	"item.synbio.protein_gfp_tier1": "蛋白质：GFP（1级）",
 	"item.synbio.protein_gfp_tier2": "蛋白质：GFP（2级）",
@@ -90,7 +92,7 @@
 	"tooltip.synbio.bio_enhanced": "生物强化",
 
 	"tooltip.synbio.protein.gfp": "2008年诺贝尔化学奖。GFP让科学家'看见'基因表达 — 绿色荧光=表达成功。右键手持，对背包中的质粒/工程菌进行诊断。",
-	"tooltip.synbio.protein.keratin": "头发、指甲、犀牛角的主要成分。自然界最常见的结构蛋白，兼具强度与韧性。锻造台 → 盔甲强化。",
+	"tooltip.synbio.protein.keratin": "头发、指甲、犀牛角的主要成分。自然界最常见的结构蛋白，兼具强度与灵活性。锻造台 → 盔甲强化。",
 	"tooltip.synbio.protein.myosin": "驱动肌肉收缩的分子马达。每一次心跳、每一步行走，都是肌球蛋白在ATP驱动下'行走'。锻造台 → 剑+攻击 / 靴+速度。",
 	"tooltip.synbio.protein.telomerase": "2009年诺贝尔奖。端粒酶维护染色体末端的'保护帽'（端粒），延缓细胞衰老 — 但也与癌细胞永生有关。锻造台 → 工具/装备修复。",
 	"tooltip.synbio.protein.spider_silk": "同等重量强度是钢的5倍、韧性超越Kevlar。合成生物学正试图用微生物量产蛛丝，替代石化纤维。锻造台 → 弓强化。",
@@ -110,5 +112,26 @@
 
 	"container.synbio.incubator": "培养箱",
 
-	"gene.synbio.gfp": "GFP（绿色荧光蛋白）"
+	"gene.synbio.gfp": "GFP（绿色荧光蛋白）",
+
+	"item.synbio.guide_book": "合成生物学指南",
+	"synbio.guide.title": "SynBio Crafter 指南",
+
+	"synbio.guide.page.0": "§l§6欢迎来到合成生物学！§r\n\n本指南教你如何在 Minecraft 中\n体验真实的分子生物学流程。\n\n翻到下一页，开始科学之旅！\n\n§8—— Peking HSC iGEM 2026 §r",
+	"synbio.guide.page.1": "§l什么是合成生物学？§r\n\n将工程学原理应用于生物系统，\n像搭积木一样设计和改造生物。\n\n核心思想：§6标准化§r——\n让DNA元件像电子元件一样\n可自由组合。",
+	"synbio.guide.page.2": "§lDNA、基因与蛋白质§r\n\n§6DNA§r——生命的蓝图\n（A、T、C、G 双螺旋结构）\n\n§6基因§r——编码蛋白质的片段\n\n§6蛋白质§r——功能分子\n角蛋白→发，肌球蛋白→肌\nGFP→水母发光",
+	"synbio.guide.page.3": "§l中心法则§r\n\n§6DNA → RNA → 蛋白质§r\n\n§6转录§r：\nDNA → mRNA (RNA聚合酶)\n\n§6翻译§r：\nmRNA → 蛋白质 (核糖体)\n\n§dSINEB2§r：本模组特色——\n大幅增强翻译效率！",
+
+	"synbio.guide.page.4": "§l快速通关指南§r\n\n① 击杀生物→组织\n② 工作台→鉴定DNA元件\n③ 质粒组装台→工程质粒\n④ 野生菌+氯化钙→感受态\n⑤ 感受态+质粒→工程菌\n⑥ 工程菌+肉汤→蛋白质\n⑦ 锻造台→生物强化！\n\n§8(后续每页有详配方)§r",
+	"synbio.guide.page.5": "§l流程续§r\n\n§6野生大肠杆菌§r：\n土+玻璃瓶+糖 = ×1\n\n§6氯化钙§r：\n石头+水桶 = ×4\n\n§6合成顺序§r：\n野生→感受态→工程菌\n→蛋白质（工作台）\n\n§8丢了这本书？§r\n书+空质粒 = ×1",
+	"synbio.guide.page.6": "§l① 获取空白质粒§r\n\n§6自动§r：首次进入世界得1个\n§6合成§r：1纸+1红石粉→1质粒\n§6堆叠§r：16\n\n§6质粒§r是环状DNA分子，\n是将基因送入细菌的"载体"。",
+	"synbio.guide.page.7": "§l② 收集DNA元件§r\n\n击杀生物→未知生物组织（概率）\n\n§6工作台§r：\n1组织→1随机DNA元件\n\n§6生物→CDS掉落（50%）§r：\n荧光鱿鱼→GFP  僵尸→角蛋白\n牛→肌球蛋白  末影人→端粒酶\n蜘蛛→蛛丝蛋白  烈焰人→荧光素\n溺尸→PETase  流浪者→冰核蛋白",
+	"synbio.guide.page.8": "§l③ 质粒组装台§r\n\n§6合成§r：\n铁铁铁     铁=铁锭\n铁工铁     工=工作台\n铁铁铁     → 1个组装台\n\n§6GUI布局（7格）§r：\n启动子  5'UTR\nCDS     3'UTR\n增强子  SINEB2\n中央：空质粒\n\nCDS§6必须§r有！稀有度越高\n表达倍率越好！",
+	"synbio.guide.page.9": "§l④ 转化细菌§r\n\n§6野生大肠杆菌§r：\n土+瓶+糖 → §e×1§r\n\n§6氯化钙§r：\n石头+水桶 → §e×4§r\n\n§6感受态§r：\n1野生+1氯化钙→1感受态\n\n§6转化§r：\n1感受态+1工程质粒\n→ 1工程菌\n§8(质粒不消耗，随菌复制)§r",
+	"synbio.guide.page.10": "§l⑤ 营养肉汤配方§r\n\n§2普通§r：1铁+4麦+4糖\n→ §e×8§r  [可产T1]\n\n§1进阶§r：8普通围海晶/\n发光浆果 → §e×8§r  [T1-2]\n\n§5高级§r：8蓝色围末影珍珠/\n紫颂/烈焰粉 → §e×8§r  [T1-3]\n\n§6至尊§r：8紫色围\n金苹果 → §e×8§r  [T1-4]",
+	"synbio.guide.page.11": "§l⑤ 表达蛋白质§r\n\n§6工作台合成§r：\n1工程菌 + 1营养肉汤\n→ 1蛋白质 + 1废弃物\n（肉汤消耗，菌保留）\n\n§6肉汤等级=最大蛋白等级§r\n普通→T1, 蓝色→T1-2\n紫色→T1-3, 金色→T1-4",
+	"synbio.guide.page.12": "§l⑥ 锻造台强化（战斗）§r\n\n蛋白质+装备→强化\n\n§6肌球蛋白-剑§r: +1/+3/+5/+10伤\n§6肌球蛋白-靴§r: +3/5/8/12%速\n§6角蛋白§r: 韧性+击退抗性\nT3=+1护甲, T4=+2\n§6端粒酶§r: T1-3=耐久\n§eT4=不毁+经验修补§r\n§6蛛丝蛋白-弓:§r 力量I-IV",
+	"synbio.guide.page.13": "§l⑥ 强化（特殊）§r\n\n§6荧光素酶-头盔§r:\n15秒/30秒/60秒/§e永久§r夜视\n\n§6冰核蛋白-靴§r:\n冰霜行者 I/I/II/II\n\n§2GFP§r: 右键扫描背包中\n的质粒/工程菌（诊断）\n\n§2PETase§r: 右键方块\n玻璃→沙, 羊毛→线\n陶瓦→粘土球",
+	"synbio.guide.page.14": "§l生物安全§r\n\n§ciGEM：负责任的科学！§r\n\n§6废弃培养物§r：\n每次表达都产生废弃物。\n§c≥10个§r在附近→中毒！\n§c≥30个§r→中毒+反胃！\n\n§6处理§r：熔炉烧→骨粉\n（像高压灭菌）\n\n请及时处理实验室废弃物！",
+	"synbio.guide.page.15": "§l小提示§r\n\n• 9个同色元件可升级\n• 组装台保留遗传设计\n• 稀有度越高倍率越好\n• GFP可诊断质粒信息\n• PETase回收方块为原料\n\n§8—— Peking HSC iGEM 2026 §r\n\n§o感谢游玩 SynBio Crafter！"
 }

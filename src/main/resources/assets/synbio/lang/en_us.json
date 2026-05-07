@@ -45,6 +45,8 @@
 	"item.synbio.calcium_chloride": "Calcium Chloride",
 	"item.synbio.e_coli_competent": "Competent E. coli",
 	"container.synbio.plasmid_assembler": "Plasmid Assembly Station",
+	"item.synbio.plasmid_assembler": "Plasmid Assembly Station",
+	"item.synbio.incubator": "Incubator",
 
 	"item.synbio.protein_gfp_tier1": "Protein: GFP (Tier I)",
 	"item.synbio.protein_gfp_tier2": "Protein: GFP (Tier II)",
@@ -110,5 +112,27 @@
 
 	"container.synbio.incubator": "Incubator",
 
-	"gene.synbio.gfp": "GFP (Green Fluorescent Protein)"
+	"gene.synbio.gfp": "GFP (Green Fluorescent Protein)",
+
+	"item.synbio.guide_book": "SynBio Guide Book",
+	"synbio.guide.title": "SynBio Crafter Guide",
+
+	"synbio.guide.page.0": "§l§6Welcome to Synthetic Biology!§r\n\nThis guide teaches you real molecular\nbiology workflows in Minecraft.\n\nTurn the page to begin.\n\n§8— Peking HSC iGEM 2026 §r",
+	"synbio.guide.page.1": "§lWhat is Synthetic Biology?§r\n\nEngineering meets biology — design\nand build living systems like LEGO.\n\nCore idea: §6Standardization§r —\nDNA parts work like electronic\ncomponents, freely combinable.",
+	"synbio.guide.page.2": "§lDNA, Genes & Proteins§r\n\n§6DNA§r — blueprint of life\n(A, T, C, G bases in a helix)\n\n§6Gene§r — segment coding a protein\n\n§6Protein§r — functional molecule\nKeratin→hair, Myosin→muscle,\nGFP→jellyfish glow",
+	"synbio.guide.page.3": "§lCentral Dogma§r\n\n§6DNA → RNA → Protein§r\n\n§6Transcription§r:\nDNA → mRNA (by RNA polymerase)\n\n§6Translation§r:\nmRNA → Protein (by ribosomes)\n\n§dSINEB2§r: boosts translation —\nthis mod's signature element!",
+
+	"synbio.guide.page.4": "§lQuick Pipeline Guide§r\n\n① Kill mobs → Unknown Tissue\n② Crafting → identify DNA parts\n③ Plasmid Assembler → plasmid\n④ Wild E. coli + CaCl₂ → competent\n⑤ Competent + plasmid → engineered\n⑥ Engineered + broth → protein\n⑦ Protein + Smithing → enhancement!\n\n§8(Each page has exact recipes)§r",
+	"synbio.guide.page.5": "§lPipeline (continued)§r\n\n§6Wild E. coli§r:\nDirt + Glass Bottle + Sugar = ×1\n\n§6Calcium Chloride§r:\nStone + Water Bucket = ×4\n\n§6Crafting Sequence:§r\nWild → Competent → Engineered\n→ Protein (in Crafting Table)\n\n§8Lost this book?§r\nBook + Blank Plasmid = ×1",
+
+	"synbio.guide.page.6": "§l① Blank Plasmid§r\n\n§6Auto§r: Get 1 on first join.\n§6Craft§r: 1 Paper + 1 Redstone\nDust → 1 Blank Plasmid\n§6Stack§r: 16\n\nA §6plasmid§r is a circular DNA\nmolecule. It's the 'vehicle' for\ncarrying genes into bacteria.",
+	"synbio.guide.page.7": "§l② Collect DNA Parts§r\n\nKill mobs → Unknown Biological\nTissue (random % drop).\n\n§6Crafting Table§r:\n1 Tissue → 1 random DNA part\n\n§6Mob → CDS Drops (50%):§r\nGlowSquid→GFP   Zombie→Keratin\nCow→Myosin     Enderman→Telomerase\nSpider→SpiderSilk  Blaze→Luciferase\nDrowned→PETase Stray→IceNucleation",
+	"synbio.guide.page.8": "§lPlasmid Assembler§r\n\n§6Craft:§r\n[I][I][I]  I=Iron Ingot\n[I][C][I]  C=Crafting Table\n[I][I][I]  → 1 Assembler\n\n§6GUI Layout (7 slots):§r\n§7[Pro] [5'UTR]§r\n§7[CDS] [3'UTR]§r\n§7[Enh] [SINEB2]§r\n§7[Center: Blank Plasmid]§r\n\nCDS is §6required§r! Higher\nrarity = better expression!",
+	"synbio.guide.page.9": "§l④ Transformation§r\n\n§6Wild E. coli§r:\nDirt + Bottle + Sugar → §e×1§r\n\n§6Calcium Chloride§r:\nStone + Water Bucket → §e×4§r\n\n§6Competent Cells§r:\n1 Wild + 1 CaCl₂ → 1 Competent\n\n§6Transformation§r:\n1 Competent + 1 Engineered\nPlasmid → 1 Engineered E. coli\n§8(Plasmid is NOT consumed)§r",
+	"synbio.guide.page.10": "§l⑤ Nutrient Broth Recipes§r\n\n§2Green§r: 1 Fe + 4 Wheat + 4 Sugar\n→ §e×8 Broth§r  [Tier 1]\n\n§1Blue§r: 8 Green around Prismarine/\nGlow Berries → §e×8§r  [T1-2]\n\n§5Purple§r: 8 Blue around Ender Pearl/\nChorus/Blaze → §e×8§r  [T1-3]\n\n§6Gold§r: 8 Purple around\nGolden Apple → §e×8§r  [T1-4]",
+	"synbio.guide.page.11": "§l⑤ Express Proteins§r\n\n§6Crafting Table:§r\n1 Engineered E. coli\n+ 1 Nutrient Broth\n→ 1 Protein + 1 Waste\n(Broth consumed, bacteria kept)\n\n§6Broth Tier = Max Protein:§r\nGreen→T1, Blue→T1-2,\nPurple→T1-3, Gold→T1-4\n\n§8Incubator also works:§r\n8Fe+2Glass+1Furnace→1Incubator",
+	"synbio.guide.page.12": "§l⑥ Bio-Enhancements (Combat)§r\n\nPut protein + gear in Smithing Table\n\n§6Myosin-Sword§r: +1/+3/+5/+10 dmg\n§6Myosin-Boots§r: +3/5/8/12% speed\n§6Keratin§r: Tough+KB resist;\nT3=+1 armor, T4=+2\n§6Telomerase§r: T1-3=Unbreaking;\n§eT4=Unbreakable+Mending§r\n§6Spider Silk-Bow§r: Power I-IV",
+	"synbio.guide.page.13": "§l⑥ Bio-Enhancements (Special)§r\n\n§6Luciferase-Helmet§r:\n15s/30s/60s/§e∞§r night vision\n\n§6Ice Nucleation-Boots§r:\nFrost Walker I/I/II/II\n\n§2GFP§r: Right-click → scan\nplasmids/bacteria in inventory\n\n§2PETase§r: Right-click block →\nGlass→Sand, Wool→String,\nTerracotta→Clay",
+	"synbio.guide.page.14": "§lBiosafety§r\n\n§ciGEM: responsible science!§r\n\n§6Waste Culture§r:\nEvery expression produces waste.\n§c≥10§r in 32 blocks = Poison!\n§c≥30§r = Poison + Nausea!\n\n§6Disposal§r: Furnace → Bone Meal\n(Like real autoclave sterilization)\n\nAlways dispose of lab waste!",
+	"synbio.guide.page.15": "§lTips & Credits§r\n\n• 9 same-rarity parts → upgrade\n• Plasmid assembler keeps design\n• Higher tier = better multiplier\n• Use GFP to diagnose plasmids\n• PETase recycles blocks into raw\n\n§8— Peking HSC iGEM 2026 §r\n\n§oThanks for playing SynBio Crafter!"
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:book",
+    "synbio:blank_plasmid"
+  ],
+  "result": {
+    "id": "synbio:guide_book",
+    "count": 1
+  }
+}

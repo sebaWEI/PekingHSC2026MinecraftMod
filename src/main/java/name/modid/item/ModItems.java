@@ -289,6 +289,9 @@ public final class ModItems {
 	// Biosafety: waste culture from expression; accumulates and causes negative effects
 	public static final Item WASTE_CULTURE = register("waste_culture", Item::new, new Item.Properties().stacksTo(64));
 
+	// Guide book: educational content about synthetic biology and mod mechanics
+	public static final Item GUIDE_BOOK = register("guide_book", GuideBookItem::new, new Item.Properties().stacksTo(1));
+
 	public static BrothTier getBrothTier(ItemStack stack) {
 		if (stack == null || stack.isEmpty()) return null;
 		if (stack.is(NUTRIENT_BROTH_GREEN)) return BrothTier.GREEN;
