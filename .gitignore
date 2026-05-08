@@ -43,3 +43,7 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# Dev utility scripts (not mod code)
+fix_block_model.py
+
