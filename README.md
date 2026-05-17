@@ -1,5 +1,7 @@
 # SynBio Crafter
 
+[中文说明](README_zh.md)
+
 [![Minecraft](https://img.shields.io/badge/Minecraft-26.1.2-brightgreen)](https://minecraft.net)
 [![Fabric](https://img.shields.io/badge/Fabric%20Loader-%3E%3D0.18.6-orange)](https://fabricmc.net)
 [![Java](https://img.shields.io/badge/Java-%3E%3D25-blue)](https://adoptium.net)
@@ -133,7 +135,7 @@ src/main/java/name/modid/
 
 ## Credits
 
-- **Developer**: Ziheng Wei (Sebastian Wei) — Peking HSC, iGEM 2026
+- **Developer**: PekingHSC, iGEM 2026
 - **Built with**: [Fabric Loom](https://fabricmc.net/wiki/documentation:fabric_loom), Minecraft 26.1.2 (Mojang Mappings)
 - **Special thanks**: The iGEM community and the Human Practices principle of responsible science
 
